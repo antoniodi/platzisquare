@@ -3,31 +3,13 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <br>
-  <button [disabled]="false"  (click)="activateButton(name)">Click me!</button>
-  <button [disabled]="!enable">Click me!</button>
-  <br>
-  <input placeholder="Your name" [(ngModel)]="name" />
-  <br>
-  <input placeholder="Your lastName" [(ngModel)]="lastName"/>
-  <p>Your name is {{name}} and your lastName is {{lastName}}</p>
-  <br>
-  <!--button (click)="addEmploye(name+' '+lastName)">Add employe</button>-->
-  <br>
   <ul>
-    <ng-container *ngFor="let employe of employes">
-        <li *ngIf="employe.active">{{employe.name}}</li>
+    <ng-container *ngFor="let employe of employes; let i = index" [ngSwitch]="employe.typeValue">
+      <li [ngClass]="{pair_row: (i+1)%2 != 0 }">{{employe.name}} - {{employe.typeValue}}
+        - <span class="green" *ngSwitchCase="'low'">Precio insuperable</span>
+          <span class="yellow" *ngSwitchCase="'medium'">Precio bajo</span>
+          <span class="red" *ngSwitchCase="'high'">Precio normal</span>
+      </li>
     </ng-container>
   </ul>
-
-  <ul>
-    <ng-container *ngFor="let user of users; let i = index">
-      <li [ngStyle]="{color: (user.age >= 18) ? 'black' : 'red'}" [ngClass]="{pair_row: (i+1)%2 != 0 }">{{user.name}}</li>
-    </ng-container>
-  </ul>
-  <!-- this creates a google map on the page with the given lat/lng from -->
-  <!-- the component as the initial center of the map: -->
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
 <router-outlet></router-outlet>

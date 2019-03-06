@@ -6,18 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'My first AGM project';
-  lat = 7.104217;
-  lng = -73.141460;
+  title = 'ngSwitch';
   enable = false;
   name: string;
   lastName: string;
   employes: any = [
-    {active: true, name: 'Ana Milena'},
-    {active: false, name: 'Laidy Rueda'},
-    {active: true, name: 'Sandra Catalina'},
-    {active: true, name: 'Elizabeth Correa'},
-    {active: true, name: 'Alejandra Rendon'}
+    {typeValue: 'low', price: 120000, name: 'Ana Milena'},
+    {typeValue: 'low', price: 120000, name: 'Ana Lizua'},
+    {typeValue: 'low', price: 120000, name: 'Laidy Rueda'},
+    {typeValue: 'medium', price: 160000, name: 'Sandra Catalina'},
+    {typeValue: 'medium', price: 160000, name: 'Elizabeth Correa'},
+    {typeValue: 'high', price: 220000, name: 'Alejandra Rendon'},
+    {typeValue: 'high', price: 220000, name: 'Vanesa Roldan'}
   ];
 
   users: any = [
