@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'My first AGM project';
-  lat = 7.104217;
-  lng = -73.141460;
+  title = 'Plantilla';
   enable = false;
   name: string;
   lastName: string;
