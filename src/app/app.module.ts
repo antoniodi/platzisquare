@@ -10,10 +10,13 @@ import { FormsModule } from '@angular/forms';
 // Library to use google maps
 import { AgmCoreModule } from '@agm/core';
 
+// Directives
+import { ResaltarDirective } from '../app/directives/resaltar.directive';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, ResaltarDirective
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule,

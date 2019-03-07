@@ -3,4 +3,9 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <ul>
+    <ng-container *ngFor="let article of articles">
+      <li [resaltar]="article.outlet">article.name</li>
+    </ng-container>
+  </ul>
 <router-outlet></router-outlet>

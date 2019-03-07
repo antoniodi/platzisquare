@@ -26,6 +26,14 @@ export class AppComponent {
     {name: 'Julian Rueda', age: 16}
   ];
 
+  articles: any = [
+    {outlet: 'yes', price: 12000, name: 'Juan Valdes'},
+    {outlet: 'yes', price: 12000, name: 'Juan Valdes'},
+    {outlet: 'no', price: 17000, name: 'Arturo Calle'},
+    {outlet: 'no', price: 17000, name: 'Arturo Calle'},
+    {outlet: 'no', price: 17000, name: 'Arturo Calle'}
+  ];
+
   constructor() {
     setTimeout(() => {
       this.enable = true;
