@@ -10,10 +10,13 @@ import { FormsModule } from '@angular/forms';
 // Library to use google maps
 import { AgmCoreModule } from '@agm/core';
 
+// Directive for count clicks
+import { ContarClicksDirective } from '../app/directives/contar-clicks.directive';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, ContarClicksDirective
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule,
