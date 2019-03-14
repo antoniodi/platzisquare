@@ -18,14 +18,6 @@ export class AppComponent {
     {active: true, name: 'Alejandra Rendon'}
   ];
 
-  users: any = [
-    {name: 'Antonio Cortés', age: 24},
-    {name: 'Leidy Rueda', age: 19},
-    {name: 'Sandra rueda', age: 18},
-    {name: 'Diana Rueda', age: 17},
-    {name: 'Julian Rueda', age: 16}
-  ];
-
   constructor() {
     setTimeout(() => {
       this.enable = true;

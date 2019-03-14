@@ -5,3 +5,8 @@ agm-map {
 .pair_row {
   background: blueviolet
 }
+
+.active, .active:hover {
+  color: yellow;
+  font-weight: bold;
+}

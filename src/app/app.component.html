@@ -1,20 +1,5 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <mat-toolbar color="primary">
-    <span> <button mat-flat-button color="primary">PlatziSquare</button> </span>
-    <span> <button mat-button color="white">Option one</button> </span>
-  </mat-toolbar>
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-
-  <ul>
-    <ng-container *ngFor="let user of users">
-      <li>{{user.name}}</li>
-    </ng-container>
-  </ul>
-
-  <mat-list *ngFor="let user of users">
-    <mat-list-item>{{user.name}}</mat-list-item>
-  </mat-list>
+<mat-toolbar color="primary">
+  <span> <button routerLinkActive="active" [routerLink]="'/places'" mat-flat-button color="primary">Places</button> </span>
+  <span> <button routerLinkActive="active" [routerLink]="'/detail'" mat-button color="white">Option one</button> </span>
+</mat-toolbar>
 <router-outlet></router-outlet>

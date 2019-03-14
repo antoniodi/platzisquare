@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+
+// App components
 import { AppComponent } from './app.component';
+import { DetailComponent } from './detail/detail.component';
+import { PlacesComponent } from './places/places.component';
 
 // Library tu use two way data bindings
 import { FormsModule } from '@angular/forms';
@@ -18,10 +22,9 @@ import {MatListModule} from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, DetailComponent, PlacesComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule,
