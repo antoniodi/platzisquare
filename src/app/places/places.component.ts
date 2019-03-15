@@ -1,3 +1,4 @@
+import { PlacesService } from './../services/places.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,13 +15,10 @@ export class PlacesComponent implements OnInit {
     {id: 1, name: 'Julian Rueda', age: 16}
   ];
 
-  cities: any = [
-    {id: 1, name: 'Medellin'},
-    {id: 2, name: 'Bucaramanga'},
-    {id: 3, name: 'Bogotá'},
-    {id: 4, name: 'Cali'},
-  ];
-  constructor() { }
+  places = null;
+  constructor(private placesServices: PlacesService) {
+    this.places = placesServices.getPlaces();
+   }
 
   ngOnInit() {
   }

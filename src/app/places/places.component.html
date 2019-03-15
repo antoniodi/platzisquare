@@ -11,7 +11,7 @@
   <mat-list-item>{{user.name}}</mat-list-item>
 </mat-list>
 
-<mat-list *ngFor="let city of cities">
+<mat-list *ngFor="let city of places">
   <a [routerLink]="[ '/detail', city.id ]" [queryParams]="{action:'hola', action2:'bebe', param1: city.name}">
     <mat-list-item>{{city.name}}</mat-list-item>
   </a> 
